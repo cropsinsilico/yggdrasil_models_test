@@ -1,0 +1,14 @@
+model:
+  name: test3
+  args: []
+  language: executable
+  inputs:
+  - name: default
+    commtype: default
+    datatype:
+      type: bytes
+  outputs:
+  - name: default
+    commtype: default
+    datatype:
+      type: bytes
