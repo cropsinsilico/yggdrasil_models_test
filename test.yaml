@@ -1,0 +1,8 @@
+model:
+  name: test
+  args:
+  - ''
+  language: executable
+  inputs: []
+  outputs: []
+  repository_url: test
