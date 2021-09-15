@@ -3,6 +3,7 @@ name: Validate the models in the repository
   push:
     tags:
     - '*'
+  pull_request:
   schedule:
   - cron: 0 10 * * 1
 jobs:
