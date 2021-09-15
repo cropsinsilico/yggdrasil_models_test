@@ -9,8 +9,7 @@ jobs:
     name: Validate schema
     runs-on: ubuntu-latest
     container:
-      image: cropsinsilico/yggdrasil-dev:1d059a5af6dcf4b4dd88d1dca409aeb063b820bf
-      options: --entrypoint conda run -n env
+      image: cropsinsilico/yggdrasil-executable-dev:1d059a5af6dcf4b4dd88d1dca409aeb063b820bf
     steps:
     - uses: actions/checkout@v2
     - name: Validate the model YAMLs against the schema
