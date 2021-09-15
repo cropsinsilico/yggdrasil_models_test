@@ -16,3 +16,4 @@ jobs:
     - uses: actions/checkout@v2
     - name: Validate the model YAMLs against the schema
       run: python utils/validate.py
+      shell: bash -l {0}
