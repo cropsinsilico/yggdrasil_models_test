@@ -1,8 +1,6 @@
 name: Validate the models in the repository
 'on':
   push:
-    tags:
-    - '*'
   pull_request:
   schedule:
   - cron: 0 10 * * 1
@@ -12,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: cropsinsilico/yggdrasil-dev:1d059a5af6dcf4b4dd88d1dca409aeb063b820bf
+      options: --entrypoint conda run -n env
     steps:
     - uses: actions/checkout@v2
     - name: Validate the model YAMLs against the schema
       run: python utils/validate.py
-      shell: bash -l {0}
