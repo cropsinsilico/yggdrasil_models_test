@@ -22,6 +22,7 @@ if __name__ == "__main__":
         help="Run each model after validating it.")
     args = parser.parse_args()
     if not args.yaml:
-        args.yaml = sorted(glob.glob(os.path.join(
-            os.path.dirname(os.path.dirname(__file__)), '*')))
+        yaml_dir = os.path.dirname(os.path.dirname(__file__))
+        args.yaml = sorted(glob.glob(os.path.join(yaml_dir, '*.yml'))
+                           + glob.glob(os.path.join(yaml_dir, '*.yaml')))
     validate(args.yaml, run=args.run)

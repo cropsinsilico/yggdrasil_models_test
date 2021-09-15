@@ -12,16 +12,6 @@ jobs:
       image: cropsinsilico/yggdrasil-dev:1d059a5af6dcf4b4dd88d1dca409aeb063b820bf
     steps:
     - uses: actions/checkout@v2
-    - name: Check conda installation
-      run: |
-        conda info
-        conda list
-        conda info --envs
-      # uses: cropsinsilico/yggdrasil-executable-dev:1d059a5af6dcf4b4dd88d1dca409aeb063b820bf
-      # with:
-      #   args: python utils/validate.py
-      # run: python utils/validate.py
-      # shell: bash -l {0}
     - name: Validate the model YAMLs against the schema
       run: |
         conda run -n env python utils/validate.py
