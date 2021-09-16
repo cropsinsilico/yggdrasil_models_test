@@ -1,11 +1,13 @@
 import os
 import glob
 import argparse
+# from yggdrasil.services import validate_model_submission
 from yggdrasil import yamlfile, runner
 
 
 def validate(yamls, run=False):
     for x in yamls:
+        # validate_model_submission(x)
         yamlfile.parse_yaml(x, model_submission=True)
         if run:
             runner.run(x)
