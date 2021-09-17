@@ -9,7 +9,7 @@ jobs:
     name: Validate schema
     runs-on: ubuntu-latest
     container:
-      image: cropsinsilico/yggdrasil-dev:1d059a5af6dcf4b4dd88d1dca409aeb063b820bf
+      image: cropsinsilico/yggdrasil:v1.8.0
     steps:
     - uses: actions/checkout@v2
     - name: Validate the model YAMLs against the schema

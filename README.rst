@@ -6,7 +6,7 @@ Requirements
 To be merged, a model YAML must meet the following requirements:
 
   1. Is a valid YAML file with valid syntax
-  2. Obeys `this JSON schema <https://github.com/cropsinsilico/model_submission_form/blob/main/static/model.json>`_
+  2. Obeys the ``model_form.json`` schema that can be downloaded from `here <https://cropsinsilico.github.io/yggdrasil/advanced/schema.html#additional-schemas>`_
   3. Points to a valid GitHub repository that
 
      1. Contains a LICENSE file
