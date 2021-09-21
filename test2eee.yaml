@@ -1,0 +1,10 @@
+model:
+  name: test2eee
+  args:
+  - test
+  language: executable
+  inputs: []
+  outputs: []
+  description: test
+  repository_commit: test
+  repository_url: test
