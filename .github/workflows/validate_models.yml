@@ -3,7 +3,7 @@ name: Validate the models in the repository
   push:
   pull_request:
     paths-ignore:
-      test_FakePlant_submit.yaml
+      models/test_FakePlant_submit.yaml
   schedule:
   - cron: 0 10 * * 1
 jobs:
