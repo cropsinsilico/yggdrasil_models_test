@@ -1,9 +1,11 @@
 name: Validate the models in the repository
 'on':
   push:
+    paths-ignore:
+      - models/test_FakePlant_submit.yaml
   pull_request:
     paths-ignore:
-      models/test_FakePlant_submit.yaml
+      - models/test_FakePlant_submit.yaml
   schedule:
   - cron: 0 10 * * 1
 jobs:
