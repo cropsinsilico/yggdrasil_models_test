@@ -1,0 +1,29 @@
+model:
+  name: test_FakePlant_submit
+  args:
+  - src/fakemodel.py
+  - --yggdrasil
+  language: python
+  inputs:
+  - name: photosynthesis_rate
+    datatype:
+      type: bytes
+    default_file:
+      filetype: table
+      name: ./Input/input.txt
+  outputs:
+  - name: growth_rate
+    datatype:
+      type: bytes
+    default_file:
+      filetype: table
+      name: ./Output/output.txt
+  additional_dependencies:
+    c++:
+    - cmake
+  dependencies:
+  - numpy
+  description: Example model submission
+  repository_commit: 498d04b7c98078fbd8d608f860882dc571476fd8
+  repository_url: https://github.com/cropsinsilico/example-fakemodel
+  validation_command: validate.py
