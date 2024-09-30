@@ -1,0 +1,67 @@
+model:
+  name: ePhotosynthesis_C
+  args:
+  - ./ePhoto
+  - -d
+  - '1'
+  - -a
+  - InputATPCost.txt
+  - -e
+  - InputEvn.txt
+  - -T
+  - '25'
+  - -n
+  - InputEnzyme.txt
+  - -g
+  - InputGRNC.txt
+  language: c++
+  inputs:
+  - name: param
+    datatype:
+      type: object
+    default_file:
+      filetype: table
+      name: ./InputSteps.txt
+      transform:
+      - field_names: []
+        original_datatype:
+          type: object
+        transformtype: array
+  outputs:
+  - name: output
+    datatype:
+      type: array
+    default_file:
+      filetype: table
+      name: output_ygg_multiple.data
+    vars:
+    - datatype:
+        type: float
+      name: Light intensity
+    - datatype:
+        type: float
+      name: Vc
+    - datatype:
+        type: float
+      name: Vo
+    - datatype:
+        type: float
+      name: VPGA
+    - datatype:
+        type: float
+      name: VT3P
+    - datatype:
+        type: float
+      name: Vstarch
+    - datatype:
+        type: float
+      name: Vt_glycerate
+    - datatype:
+        type: float
+      name: Vt_glycolate
+    - datatype:
+        type: float
+      name: CO2AR
+  description: C++ port of the ePhotosynthesis Matlab model code
+  repository_commit: 02b911b8f30588d8eafbb277abd31cc03cb9dbb5
+  repository_url: https://github.com/cropsinsilico/ePhotosynthesis_C
