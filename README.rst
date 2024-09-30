@@ -1,4 +1,4 @@
-This repository contains YAML files describing computational models that can be used in `yggdrasil <https://github.com/cropsinsilico/yggdrasil>`_ integration. Models can be submitted via pull request or via `this form <https://yggdrasil-models.herokuapp.com>`_ (`source code <https://github.com/cropsinsilico/model_submission_form>`_) which will validate entries, format entries as a YAML file, and open a pull request to add it.
+This repository contains YAML files describing computational models that can be used in `yggdrasil <https://github.com/cropsinsilico/yggdrasil>`_ integration. Models can be submitted via pull request or via `this form <https://yggdrasil-models.onrender.com>`_ (`source code <https://github.com/cropsinsilico/model_submission_form>`_) which will validate entries, format entries as a YAML file, and open a pull request to add it.
 
 Requirements
 ------------
